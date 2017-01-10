@@ -1,0 +1,24 @@
+--> Pull the latest Ubuntu image
+
+  docker pull ubuntu:latest
+
+--> Run this Docker image in interactive mode attached to the current terminal and runinning the bash shell
+
+  docker run -it ubuntu:latest /bin/bash
+  exit
+
+--> Restart the last container
+
+  --> Obtain the Docker image name
+      docker ps -a
+
+  --> Restart the docker image
+      docker restart silly_bassi
+
+--> Stop this container
+
+  docker stop silly_bassi
+
+--> Remove the container
+
+  docker rm silly_bassi
