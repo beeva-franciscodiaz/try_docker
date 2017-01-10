@@ -1,0 +1,30 @@
+## Solition
+
+1. Create coustom folder, move it and create Dockerfile
+
+  mkdir custom
+  cd custom
+  vim Dockerfile
+
+2. Build Dockerfile
+
+  --> Dockerfile content
+
+    FROM centos:latest
+    MAINTAINER francisco.diaz@beeva.com
+
+    RUN yum -y update && \
+        yum -y install openssh-server \
+        yum -y install httpd
+
+    EXPOSE 22 80
+
+3.
+
+  --> Build the container
+
+    docker build -t mycustomimg/withservices:v1 .
+
+  --> List Docker Images
+
+    docker images
