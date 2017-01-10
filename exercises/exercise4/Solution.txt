@@ -1,0 +1,16 @@
+--> Create a directory docker /mydata/mydata.txt
+
+   mkdir docker && cd docker
+   mkdir mydata && cd mydata
+   echo "Anithing text" >> mydata
+
+--> Create a docker container name 'local_vol' from the 'centos:6' image. The container should be created in interactive mode, attached to the current terminal and running the bash shell. Finally create the container with a volume (or directory) called 'containerdata' so that the system will automatically create the directory/mount when the container starts.
+
+  docker run -it --name="local_vol" -v /containerdata centos:6 /bin/bash
+
+-->  List the filesystems within the container, specifically looking for the volume/directory that was added to the container during creation.
+
+  ls
+
+--> Exit the container. This time, create another container called 'remote_vol' with the same container configuration except when creating the volume in the container, link the volume name 'mydata' to the underlying host directory structure created in Step #1.
+
