@@ -1,0 +1,36 @@
+Run image on interactive mode in bash shell
+
+      docker run -it centos:7 /bin/bash
+
+     -->  Update all packages for the container OS
+
+      yum -y update
+
+    --> Start Apache service
+
+      systemctl start apache
+
+      or
+
+      /etc/init.d/apachectl -d
+
+    --> Verify that the container is listening on port 80
+
+      yum install telnet
+      telnet localhost 80
+
+    --> Exit of container
+
+      exit
+
+    --> List all stopped containers
+
+      docker ps -a
+
+    --> Commit the changes
+
+      docker commit 351dbef4ccb4 newcentos:withapache
+
+    --> List Docker Images
+
+      docker images
