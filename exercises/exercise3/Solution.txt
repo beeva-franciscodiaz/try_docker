@@ -21,4 +21,18 @@
 
 --> Remove the container
 
-  docker rm silly_bassi
+  docker rm <container_name>
+
+--> Create a new image (my_container), that will allow it to run interactively and attached the local console running the bash shell
+
+  docker create -it --name="my_container" ubuntu:latest /bin/bas
+  docker ps -a (to view the new container is Created, not run)
+
+--> Start the container and verify the container is running.
+
+  docker start my_container
+  docker ps -a (the container must be UP)
+
+--> Attach the container
+
+  docker attach my_container
