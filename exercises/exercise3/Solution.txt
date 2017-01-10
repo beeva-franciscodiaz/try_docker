@@ -10,9 +10,11 @@
 --> Restart the last container
 
   --> Obtain the Docker image name
+
       docker ps -a
 
   --> Restart the docker image
+
       docker restart silly_bassi
 
 --> Stop this container
